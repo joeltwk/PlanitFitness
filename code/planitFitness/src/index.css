@@ -1,0 +1,700 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+.navbar h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  margin-right: 30px;
+}
+
+.navbar img {
+  height: 50px;
+  margin-left: 30px;
+}
+
+.block {
+  margin: 0 auto;
+  width: 700px;
+  height: auto;
+  border-bottom: 1px solid rgb(208, 208, 208);
+  padding-bottom: 20px;
+}
+
+.blockHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blockHeader .filterMenu {
+  margin-top: 20px;
+  display: flex;
+  height: 20px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.filterMenu .sortSelect {
+  background-color: rgb(255, 154, 76);
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  border: none;
+  height: 30px;
+  width: 100px;
+}
+
+.filterMenu .sortLabel {
+  font-family: "Inter", sans-serif;
+  color: rgb(57,57,57);
+  font-weight: 100px;
+  margin-right: 10px;
+}
+
+
+.blockHeader .day{
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1.1em;
+  text-align: right;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.blockHeader .date{
+  margin: 0;
+  margin-top: 5px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: .8em;
+  text-align: right;
+}
+
+.block h1 {
+  color: rgb(57, 57, 57);
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1.3em;
+  margin-bottom: 35px;
+}
+
+.block h4 {
+  margin-bottom: 10px;
+  color: rgb(107, 107, 107);
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: .8em;
+}
+
+.greyButton {
+  color: rgb(235, 235, 235);
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(57, 57, 57);
+}
+
+.section {
+  display: grid;
+  gap: auto;
+  row-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  background-color: rgb(57, 57, 57);
+  width: 340px;
+  height: 65px;
+  border-radius: 10px;
+  transition: .5s;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  /* margin-left: -40px; */
+}
+
+.card .btns {
+  padding: 0px;
+  display: flex;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.btns .editBtn:hover {
+  color: rgb(255, 154, 76);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.deleteBtn:hover {
+  color: rgb(255, 154, 76);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.cardhover:hover {
+  background-color: rgb(255, 154, 76);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.pagination {
+  margin-top: 15px;
+}
+
+.pageNumbers {
+  color: rgb(110, 110, 110);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.active {
+  color: rgb(57,57,57);
+  font-weight: bolder;
+  pointer-events: none;
+}
+
+.add {
+  margin-top: 15px;
+  background-color: rgb(194, 194, 194);
+  width: 340px;
+  height: 65px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center ;
+  transition: .5s;
+}
+
+.add:hover {
+  background-color: rgb(255, 154, 76);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.add .cardHeader {
+  padding-left: 15px;
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+.card h1 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: rgb(235, 235, 235);
+  margin: 0;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.card p {
+  font-size: .8em;
+  margin: 0;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  color: rgb(235, 235, 235);
+}
+
+.modal {
+  animation: fadeIn 0.5s;
+}
+
+.modal_header {
+  color: rgb(194, 194, 194);
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1.3em;
+  margin-bottom: 35px;
+}
+
+.modal .details {
+  color: rgb(194, 194, 194);
+  font-family: "Inter", sans-serif;
+  margin-right: 5px;
+}
+
+.input_box {
+  color: rgb(194, 194, 194);
+  margin-bottom: 5px;
+  border: none;
+}
+
+.modal {
+  background-color: rgb(57,57,57);
+  border-radius: 10px;
+  border: none;
+}
+
+.cancel-btn {
+  font-family: "Inter", sans-serif; 
+  color:  rgb(57,57,57);
+  border-radius: 2px;
+  border: none;
+  height: 25px;
+  background-color: rgb(194, 194, 194);
+  margin-top: 20px;
+  margin-right: 7px;
+}
+
+.save-btn {
+  font-family: "Inter", sans-serif;
+  color:  rgb(57,57,57);
+  border-radius: 2px;
+  border: none;
+  height: 25px;
+  background-color: rgb(255, 154, 76);
+}
+
+.cancel-btn:hover {
+  cursor: pointer;
+}
+
+.save-btn:hover{
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: .6;
+}
+
+.card .editBtn {
+  color: rgb(194, 194, 194);
+}
+
+.modalName {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: medium;  
+}
+
+.modalDescription {
+  margin-top: 0px;
+  font-size: medium;
+  font-weight: 100;
+}
+
+.modal_header h3 {
+  margin-bottom: 0px;
+}
+
+.routineDetailCard {
+  width: 600px;
+  height: 550px;
+}
+
+.routineCardExerciseHeader {
+  font-family: "Inter", sans-serif;
+  color: rgb(194, 194, 194);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.4em;
+}
+
+.routineExerciseContainer{
+  width: 180;
+}
+
+.exerciseTitle {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+}
+
+.routineDetailExerciseNumber {
+  font-family: "Inter", sans-serif;
+  color: rgb(194, 194, 194);
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: medium;
+  font-weight: 200;
+  margin-right: 10px;
+}
+
+.routineDetailExerciseName {
+  font-family: "Inter", sans-serif;
+  color: rgb(194, 194, 194);
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.routineDetailExerciseCategory {
+  font-family: "Inter", sans-serif;
+  color: rgb(194, 194, 194);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: medium;
+  font-weight: 100;
+}
+
+.routineModalContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.addExToRoutList {
+  display: grid;
+  gap: auto;
+  row-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+}
+
+.exToRouteDetails {
+  background-color: rgb(194, 194, 194);
+  border-radius: 10px;
+  width: 150px;
+  margin-right: 15px;
+}
+
+.exToRouteDetails:hover {
+  background-color: rgb(255, 154, 76);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.exToRoutDetailsHeader {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  color: rgb(57,57,57);
+}
+
+.exToRoutDetailsDescription {
+  font-family: "Inter", sans-serif;
+  font-size: .9em;
+  font-weight: 200;
+  margin-top: 0px;
+  margin-left: 10px;
+  color: rgb(57,57,57);
+}
+
+.exToRoutPagination {
+  margin-top: 15px;
+}
+
+.exToRoutPageNumbers {
+  color: rgb(182, 182, 182);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.exToRoutActive {
+  color: rgb(255, 154, 76);
+  font-weight: bolder;
+  pointer-events: none;
+}
+
+.generic-btn {
+  font-family: "Inter", sans-serif; 
+  color:  rgb(57,57,57);
+  border-radius: 2px;
+  border: none;
+  height: 25px;
+  background-color: rgb(194, 194, 194);
+  margin-top: 20px;
+  margin-right: 7px;
+}
+
+.exerciseTitleDetails {
+  display: flex;
+}
+
+.generic-btn:hover {
+  background-color: rgb(255, 154, 76);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.routExDeleteBtn {
+  color: rgb(194, 194, 194);
+  font-family: "Inter", sans-serif; 
+  font-size: .7em;
+  font-weight: 100;
+}
+
+.routExDeleteBtn:hover {
+  color: rgb(255, 154, 76);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.startWorkoutContainer {
+  margin-top: 15px;
+}
+
+.greyButton:hover {
+  background-color: rgb(255, 154, 76);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.workoutCardComplete {
+  background-color: rgb(240, 132, 49);
+}
+
+.selectedRoutineExercises .exerciseName {
+  display: flex;
+  margin-top: 10px;
+  color: rgb(194, 194, 194);
+  font-family: "Inter", sans-serif; 
+}
+
+.selectedRoutineExercises .exerciseName p {
+  margin: 0;
+}
+
+.selectedRoutineExercises .exerciseCategory {
+  margin-top: 0;
+  color: rgb(194, 194, 194);
+  font-family: "Inter", sans-serif;  
+  font-weight: 100;
+}
+
+.selectedRoutineExercises .exerciseCategory p {
+  margin: 0;
+}
+
+.lineBreak {
+  color: rgb(194, 194, 194);
+}
+
+.exerciseSetContainer {
+  background-color: rgb(255, 154, 76);
+  border-radius: 10px;
+  height: 15  0px;
+  margin-bottom: 10px;
+}
+
+.exerciseSetTitle {
+  padding-top: 10px;
+}
+
+.exerciseSetContainer h1 {
+  margin: 0px;
+  margin-left: 15px;
+}
+
+.exerciseSetContainer p {
+  font-family: "Inter", sans-serif; 
+  color:  rgb(57,57,57);
+  margin: 0px;
+  margin-left: 15px;
+  padding-bottom: 15px;
+}
+
+.exerciseSetHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.addSetBtn {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.addSetBtn button {
+  border: none;
+  padding: 5px 10px;
+  color: rgb(194, 194, 194);;
+  background-color: rgb(88, 88, 88);
+  border-radius: 5px;
+}
+
+.addSetBtn button:hover {
+  background-color: rgb(46, 46, 46);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.exerciseSetDetails {
+  display: flex;
+}
+
+.setBlock {
+  height: 80px;
+  background-color: rgb(88, 88, 88);
+  margin: 20px;
+  margin-right: 0px;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.setBlock:hover {
+  background-color: rgb(46, 46, 46);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.setDetails {
+  display: flex;
+}
+
+.setDetails p {
+  color: rgb(194, 194, 194);
+  font-weight: 100;
+  font-size: .9em;
+  padding-bottom: 0;
+}
+
+.setWeight {
+  text-align: center;
+}
+
+.setReps {
+  text-align: center;
+}
+
+.setDetails h1 {
+  color: rgb(194, 194, 194);
+}
+
+.setNumberContainer p {
+  margin-top: 10px;
+  color: rgb(194, 194, 194);
+  font-size: .7em;
+  padding-bottom: 5px;
+}
+
+.loginContainer {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.loginContainer .details {
+  font-family: "Inter", sans-serif; 
+  color:  rgb(57,57,57);
+  margin-right: 15px;
+}
+
+.input_box input {
+  border: none;
+  background-color: rgb(232, 232, 232);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.setPageNumbers {
+  color:  rgb(57,57,57);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.setPagination {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.loginError {
+  background-color: rgb(255, 95, 95);
+}
+
+.loginErrorText {
+  color: rgb(255, 95, 95);
+  font-family: "Inter", sans-serif; 
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: .8em;
+}
+
+.loginErrorInactive {
+  display: none;
+}
+
+.loadingLogo {
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingContainer {
+  justify-content: center; 
+}
+
+.loadingGifContainer {
+  margin-top: 30px;
+  width: 200px;
+}
+
+.loadingContainer .loadingGif {
+  /* animation: fadeOut 1s; */
+  height: 70px;
+}
+
+@keyframes fadeInNOut {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.loadingLogo img {
+  animation: fadeInNOut 1.5s;
+  width: 200px;
+}
+
+.workoutBlock {
+  animation: fadeIn 0.3s;
+}
+
+.routineBlock {
+  animation: fadeIn 0.6s;
+}
+
+.exerciseBlock {
+  animation: fadeIn 0.9s;
+}
